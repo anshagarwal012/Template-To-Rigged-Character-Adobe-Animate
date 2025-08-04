@@ -72,10 +72,3 @@ def slice_character(image_path, output_folder, target_size=(2048, 2048)):
             print(f"⚠️ Skipping '{clean_name}' — invalid crop area")
 
     return exported_names
-
-# Example usage
-if __name__ == "__main__":
-    name = "girl"
-    output_folder = f"output/{name}"
-    exported = slice_character(f"characters/{name}.png", output_folder, target_size=(4096, 4096))
-    print("✅ Exported files:", exported)

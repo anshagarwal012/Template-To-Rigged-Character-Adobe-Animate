@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import os
 import shutil
 import argparse
@@ -168,18 +167,3 @@ def create_xfl_project(image_folder, xfl_folder):
 
 def get_random_color():
     return "#{:06X}".format(random.randint(0, 0xFFFFFF))
-
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("image_folder", help="Folder with PNG images")
-    parser.add_argument("xfl_folder", help="Destination .xfl folder path")
-    args = parser.parse_args()
-
-    if not os.path.isdir(args.image_folder):
-        print("❌ Error: Image folder doesn't exist.")
-        return
-
-    create_xfl_project(args.image_folder, args.xfl_folder)
-
-if __name__ == "__main__":
-    main()
