@@ -1,0 +1,414 @@
+<DOMLayer name="mouth_shape_1_layer" color="#4BFCDB" locked="true" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="mouth_shape_1" selected="true">
+                         <matrix>
+                              <Matrix tx="565.65" ty="350.75"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="head_eyes_closed_layer" color="#222DB6" locked="true" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="head_eyes_closed" selected="true">
+                         <matrix>
+                              <Matrix tx="408.35" ty="107.15"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point x="380.8" y="478.05"/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="left_palm_2_layer" color="#57854F" locked="true" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="left_palm_2" selected="true">
+                         <matrix>
+                              <Matrix a="0.780059814453125" b="-0.625701904296875" c="0.625701904296875" d="0.780059814453125" tx="907.7" ty="1291"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point x="434.7" y="58.95"/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="Body_layer" color="#82D379" locked="true" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="Body" selected="true">
+                         <matrix>
+                              <Matrix tx="203.65" ty="292"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point x="595.4" y="864.35"/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="arm_left_layer" color="#29D7EE" locked="true" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="arm_left" selected="true">
+                         <matrix>
+                              <Matrix a="0.998413086" b="-0.056137085" c="0.056137085" d="0.998413086" tx="669.45" ty="607.75"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point x="312" y="141.75"/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="hand_left_layer" color="#A9A2ED" locked="true" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="hand_left" selected="true">
+                         <matrix>
+                              <Matrix a="0.423370361328125" b="-0.905868530273438" c="0.905868530273438" d="0.423370361328125" tx="810.4" ty="1189.85"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point x="358.65" y="141.35"/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="arm_right_layer" color="#FE3394" locked="true" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="arm_right">
+                         <matrix>
+                              <Matrix a="0.866027832" b="0.499984741" c="-0.499984741" d="0.866027832" tx="389.1" ty="442"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point x="406.2" y="54.45"/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="hand_right_layer" color="#6B82E5" locked="true" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="hand_right" selected="true">
+                         <matrix>
+                              <Matrix a="0.996475219726562" b="0.0838165283203125" c="-0.0838165283203125" d="0.996475219726562" tx="144.1" ty="661.8"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point x="389.8" y="222.3"/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="eye_balls_layer" color="#3E56D6" locked="true" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="eye_balls">
+                         <matrix>
+                              <Matrix tx="476.4" ty="187.7"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point x="310.2" y="257.95"/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="eye_background_layer" color="#F40580" locked="true" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="eye_background" selected="true">
+                         <matrix>
+                              <Matrix tx="484.1" ty="226.2"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="right_palm_3_layer" color="#1CE3BF" locked="true" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="right_palm_3" selected="true">
+                         <matrix>
+                              <Matrix a="0.993133544921875" b="0.116973876953125" c="-0.116973876953125" d="0.993133544921875" tx="-84.6" ty="1003.05"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point x="518.8" y="68.7"/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="head_eyes_opened_layer" color="#BEF938" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="head_eyes_opened">
+                         <matrix>
+                              <Matrix tx="-1788.05" ty="-26"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="left_palm_1_layer" color="#35AF3D" current="true" isSelected="true" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="left_palm_1">
+                         <matrix>
+                              <Matrix tx="2204.25" ty="2147.55"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="left_palm_3_layer" color="#4C66DE" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="left_palm_3">
+                         <matrix>
+                              <Matrix tx="2231.4" ty="1903.1"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="leg_lower_left_layer" color="#AD1793" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMGroup>
+                         <matrix>
+                              <Matrix tx="1498.5" ty="82.4"/>
+                         </matrix>
+                         <members>
+                              <DOMSymbolInstance libraryItemName="leg_lower_left" selected="true">
+                                   <matrix>
+                                        <Matrix tx="590.65" ty="1850.55"/>
+                                   </matrix>
+                                   <transformationPoint>
+                                        <Point x="349.7" y="66.1"/>
+                                   </transformationPoint>
+                              </DOMSymbolInstance>
+                         </members>
+                    </DOMGroup>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="leg_lower_right_layer" color="#738DE1" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="leg_lower_right">
+                         <matrix>
+                              <Matrix tx="267.6" ty="1828.8"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="mouth_shape_2_layer" color="#E66E4D" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="mouth_shape_2">
+                         <matrix>
+                              <Matrix tx="-854.5" ty="-569"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="mouth_shape_3_layer" color="#337FC0" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="mouth_shape_3">
+                         <matrix>
+                              <Matrix tx="-824.5" ty="-539"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="mouth_shape_4_layer" color="#0B820C" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="mouth_shape_4">
+                         <matrix>
+                              <Matrix tx="-794.5" ty="-509"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="right_hand_palm_holding_prop__1_layer" color="#F541FC" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="right_hand_palm_holding_prop__1">
+                         <matrix>
+                              <Matrix tx="2611.05" ty="-388"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="right_hand_palm_holding_prop__2_layer" color="#AB47D7" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="right_hand_palm_holding_prop__2">
+                         <matrix>
+                              <Matrix tx="2412.25" ty="292"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="right_palm_1_layer" color="#8801E1" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="right_palm_1">
+                         <matrix>
+                              <Matrix tx="2412.25"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="right_palm_2_layer" color="#8E93E3" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="right_palm_2">
+                         <matrix>
+                              <Matrix tx="2846.4" ty="44"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="thigh_left_layer" color="#8F53C9" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMGroup>
+                         <matrix>
+                              <Matrix tx="1498.5" ty="82.4"/>
+                         </matrix>
+                         <members>
+                              <DOMSymbolInstance libraryItemName="thigh_left" selected="true">
+                                   <matrix>
+                                        <Matrix tx="614.65" ty="1532.8"/>
+                                   </matrix>
+                                   <transformationPoint>
+                                        <Point/>
+                                   </transformationPoint>
+                              </DOMSymbolInstance>
+                         </members>
+                    </DOMGroup>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>
+<DOMLayer name="thigh_right_layer" color="#FFCD52" autoNamed="false">
+     <frames>
+          <DOMFrame index="0" keyMode="9728">
+               <elements>
+                    <DOMSymbolInstance libraryItemName="thigh_right">
+                         <matrix>
+                              <Matrix tx="306" ty="1532.8"/>
+                         </matrix>
+                         <transformationPoint>
+                              <Point/>
+                         </transformationPoint>
+                    </DOMSymbolInstance>
+               </elements>
+          </DOMFrame>
+     </frames>
+</DOMLayer>

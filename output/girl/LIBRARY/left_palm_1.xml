@@ -1,0 +1,17 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="left_palm_1" itemID="6890d3b2-00000855" symbolType="graphic" lastModified="1754321826">
+  <timeline>
+    <DOMTimeline name="left_palm_1" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#360C79" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance selected="true" libraryItemName="left_palm_1.png"/>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

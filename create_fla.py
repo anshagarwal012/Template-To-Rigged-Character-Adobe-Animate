@@ -62,7 +62,7 @@ def create_structure(filename,content):
     with open(filename, "a") as f:
         f.write(content)
         
-def create_xfl_project(image_folder, xfl_folder):
+def create_xfl_project(image_folder, xfl_folder, chords):
     os.makedirs(xfl_folder, exist_ok=True)
     bitmaps_dir = os.path.join(xfl_folder, "LIBRARY")
     os.makedirs(bitmaps_dir, exist_ok=True)
@@ -71,8 +71,8 @@ def create_xfl_project(image_folder, xfl_folder):
     dom = ET.Element("DOMDocument", {
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "xmlns": "http://ns.adobe.com/xfl/2008/",
-        "width": "1280",
-        "height": "2000",
+        "width": "1600",
+        "height": "2500",
         "currentTimeline": "1",
         "xflVersion": "23.0",
         "creatorInfo": "Adobe Animate",
@@ -139,8 +139,8 @@ def create_xfl_project(image_folder, xfl_folder):
         layer = ET.SubElement(layers, "DOMLayer", {
             "name": f"{img_name}_layer",
             "color": get_random_color(),
-            "current": "false",
-            "isSelected": "false",
+            "current": "true" if (index == 0) else "false",
+            "isSelected": "true" if (index == 0) else "false",
             "autoNamed": "false"
         })
         frames = ET.SubElement(layer, "frames")
@@ -149,12 +149,33 @@ def create_xfl_project(image_folder, xfl_folder):
         symbol_instance = ET.SubElement(elements, "DOMSymbolInstance", {
             "libraryItemName": img_name
         })
+        # Get chord data for this layer
+        layer_name = f"{img_name}_layer"
+        chord = next((c for c in chords if c["layer"] == layer_name), None)
+
+        # Default fallback
+        tx = chord["tx"] if chord else (29 + index * 30)
+        ty = chord["ty"] if chord else (82 + index * 30)
+        x = chord["x"] if chord else 0
+        y = chord["y"] if chord else 0
+        a = chord.get("a") if chord and chord.get("a") not in ("", None) else None
+        b = chord.get("b") if chord and chord.get("b") not in ("", None) else None
+        c_val = chord.get("c") if chord and chord.get("c") not in ("", None) else None
+        d = chord.get("d") if chord and chord.get("d") not in ("", None) else None
+
+        # Matrix with optional a, b, c, d
         matrix = ET.SubElement(symbol_instance, "matrix")
-        ET.SubElement(matrix, "Matrix", {
-            "tx": str(29 + index * 30),
-            "ty": str(82 + index * 30)
-        })
-        ET.SubElement(symbol_instance, "transformationPoint", {"x": "611", "y": "918"})
+        matrix_attrs = {"tx": str(tx), "ty": str(ty)}
+        if a is not None: matrix_attrs["a"] = str(a)
+        if b is not None: matrix_attrs["b"] = str(b)
+        if c_val is not None: matrix_attrs["c"] = str(c_val)
+        if d is not None: matrix_attrs["d"] = str(d)
+        ET.SubElement(matrix, "Matrix", matrix_attrs)
+
+        # Transformation Point
+        tp = ET.SubElement(symbol_instance, "transformationPoint")
+        ET.SubElement(tp, "Point", {"x": str(x), "y": str(y)})
+
 
     ET.SubElement(dom, "scripts")
     ET.SubElement(dom, "PrinterSettings")

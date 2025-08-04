@@ -1,0 +1,17 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="hand_right" itemID="6890d3b2-00000852" symbolType="graphic" lastModified="1754321826">
+  <timeline>
+    <DOMTimeline name="hand_right" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#7036D0" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance selected="true" libraryItemName="hand_right.png"/>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

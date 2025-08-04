@@ -1,0 +1,17 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="thigh_right" itemID="6890d3b2-00000864" symbolType="graphic" lastModified="1754321826">
+  <timeline>
+    <DOMTimeline name="thigh_right" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#C9D037" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance selected="true" libraryItemName="thigh_right.png"/>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
