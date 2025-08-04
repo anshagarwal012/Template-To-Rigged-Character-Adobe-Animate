@@ -4,6 +4,7 @@ import shutil
 import argparse
 import uuid
 import time
+import random
 import xml.etree.ElementTree as ET
 
 ET.register_namespace('', "http://ns.adobe.com/xfl/2008/")
@@ -15,34 +16,58 @@ def generate_guid():
 def current_timestamp():
     return str(int(time.time()))
 
-def create_symbol_file(symbols_dir, name, bitmap_name):
+def create_symbol_file(symbols_dir, name, bitmap_name, itemID):
+    ET.register_namespace("", "http://ns.adobe.com/xfl/2008/")
+    ET.register_namespace("xsi", "http://www.w3.org/2001/XMLSchema-instance")
+
     symbol_root = ET.Element("DOMSymbolItem", {
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "xmlns": "http://ns.adobe.com/xfl/2008/",
         "name": name,
-        "itemID": generate_guid(),
+        "itemID": itemID,
         "symbolType": "graphic",
         "lastModified": current_timestamp()
     })
+
     timeline = ET.SubElement(symbol_root, "timeline")
-    layer = ET.SubElement(timeline, "Layer", {"name": name})
-    frame = ET.SubElement(layer, "Frame", {"index": "0"})
-    instance = ET.SubElement(frame, "Instance", {
-        "libraryItemName": bitmap_name,
-        "x": "0",
-        "y": "0"
+    dom_timeline = ET.SubElement(timeline, "DOMTimeline", {
+        "name": name,
+        "layerDepthEnabled": "true"
     })
-    ET.SubElement(instance, "matrix")
-    ET.SubElement(instance, "transformationPoint", {"x": "0", "y": "0"})
+
+    layers = ET.SubElement(dom_timeline, "layers")
+    dom_layer = ET.SubElement(layers, "DOMLayer", {
+        "name": "Layer_1",
+        "color": get_random_color(),
+        "current": "true",
+        "isSelected": "true"
+    })
+
+    frames = ET.SubElement(dom_layer, "frames")
+    dom_frame = ET.SubElement(frames, "DOMFrame", {
+        "index": "0",
+        "keyMode": "9728"
+    })
+
+    elements = ET.SubElement(dom_frame, "elements")
+    bitmap_instance = ET.SubElement(elements, "DOMBitmapInstance", {
+        "selected": "true",
+        "libraryItemName": bitmap_name
+    })
 
     path = os.path.join(symbols_dir, f"{name}.xml")
-    ET.ElementTree(symbol_root).write(path, encoding='utf-8', xml_declaration=True)
+    ET.ElementTree(symbol_root).write(path, encoding='utf-8', xml_declaration=False)
     return path
 
+def create_structure(filename,content):
+    with open(filename, "a") as f:
+        f.write(content)
+        
 def create_xfl_project(image_folder, xfl_folder):
     os.makedirs(xfl_folder, exist_ok=True)
     bitmaps_dir = os.path.join(xfl_folder, "LIBRARY")
-    symbols_dir = os.path.join(xfl_folder, "Symbols")
     os.makedirs(bitmaps_dir, exist_ok=True)
-    os.makedirs(symbols_dir, exist_ok=True)
+    create_structure(os.path.join(xfl_folder,'girl.xfl'),'PROXY-CS5')
 
     dom = ET.Element("DOMDocument", {
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
@@ -97,15 +122,15 @@ def create_xfl_project(image_folder, xfl_folder):
             "originalCompressionType": "lossless",
             "quality": "50",
             "href": img,
-            "bitmapDataHRef": f"M 1 {int(time.time() * 10)}.dat",
+            # "bitmapDataHRef": f"M 1 {int(time.time() * 10)}.dat",
             "frameRight": "24440",
             "frameBottom": "36720"
         })
 
         # Symbol XML
-        symbol_xml_path = create_symbol_file(symbols_dir, img_name, img)
+        symbol_xml_path = create_symbol_file(bitmaps_dir, img_name, img,bitmap_guid)
         symbols.append(ET.Element("Include", {
-            "href": os.path.relpath(symbol_xml_path, xfl_folder).replace("\\", "/"),
+            "href": os.path.basename(symbol_xml_path).replace("\\", "/"),
             "loadImmediate": "false",
             "itemID": generate_guid(),
             "lastModified": current_timestamp()
@@ -114,9 +139,9 @@ def create_xfl_project(image_folder, xfl_folder):
         # Timeline Layer
         layer = ET.SubElement(layers, "DOMLayer", {
             "name": f"{img_name}_layer",
-            "color": "#00FFFF",
-            "current": "true",
-            "isSelected": "true",
+            "color": get_random_color(),
+            "current": "false",
+            "isSelected": "false",
             "autoNamed": "false"
         })
         frames = ET.SubElement(layer, "frames")
@@ -138,8 +163,11 @@ def create_xfl_project(image_folder, xfl_folder):
 
     tree = ET.ElementTree(dom)
     dom_path = os.path.join(xfl_folder, "DOMDocument.xml")
-    tree.write(dom_path, encoding='utf-8', xml_declaration=True)
+    tree.write(dom_path, encoding='utf-8', xml_declaration=False)
     print(f"✅ DOMDocument created at {dom_path}")
+
+def get_random_color():
+    return "#{:06X}".format(random.randint(0, 0xFFFFFF))
 
 def main():
     parser = argparse.ArgumentParser()
