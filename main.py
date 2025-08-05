@@ -1,9 +1,6 @@
 from split import *
 from create_fla import *
-
-name = "ghost"
-output_folder = f"output/{name}"
-chords = chords = [
+chords = [
   {
     "layer": "mouth_shape_1_layer",
     "tx": 565.65,
@@ -281,8 +278,13 @@ chords = chords = [
   }
 ]
 
-exported = slice_character(f"characters/{name}.png", output_folder, target_size=(4096, 4096))
-print("✅ Exported files:", exported)
-output = os.path.join(output_folder,name)
-create_xfl_project(output_folder, output, chords)
+for filename in os.listdir('characters'):
+    if os.path.isfile(os.path.join('characters', filename)):
+        name_without_ext = os.path.splitext(filename)[0]
+        name = name_without_ext
+        output_folder = f"output/{name}"
+        exported = slice_character(f"characters/{name}.png", output_folder, target_size=(4096, 4096))
+        print("✅ Exported files:", exported)
+        output = os.path.join(output_folder,name)
+        create_xfl_project(output_folder, output, chords)
 
